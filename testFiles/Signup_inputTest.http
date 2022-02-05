@@ -1,0 +1,8 @@
+POST  http://localhost:3300/signup HTTP/1.1
+Content-Type: application/json
+
+{ 
+    "username": "Muku",
+    "password": "444444",
+    "retype_Password": "444444"
+}

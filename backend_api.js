@@ -5,13 +5,21 @@ app.use(express.json({ extended: false }));
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
+    
     console.log("Backend server started at port: " + port);
 });
 client.connect();
 
+
+// Home or landing page
+app.get("/",function(req,res){
+    res.sendFile('index.html');
+});
+
 // --------------------------------------
 const fs = require('fs');
 const { Console } = require('console');
+const res = require('express/lib/response');
 var currentUser;
 
 // --------------------------------------
